@@ -21,8 +21,8 @@
     path.style="cursor:pointer;fill:#BBB";
 
     function getLightValue() {
-      Puck.eval("Puck.light()", function(v) {
-       alert("v="+v);
+      Puck.eval("getK()", function(v) {
+       alert("K="+v);
         path.style.fill="rgb("+Math.round(v*255)+",0,0)";
         setTimeout(function() {
           getLightValue();
