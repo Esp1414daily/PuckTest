@@ -20,6 +20,11 @@
     // Make sure your mouse cursor turns into a hand when over it, and gray it out
     path.style="cursor:pointer;fill:#BBB";
 
+    // When clicked, start trying to get the light value
+    path.addEventListener("click", function() {
+      getLightValue();
+    });
+   
     function getLightValue() {
       Puck.eval("getURL1()", function(v) {
        alert("URL1="+v);
@@ -32,15 +37,10 @@
       });
      setTimeout(function() {
         Puck.eval("getURL2()", function(v) {
-          alert("URK2="+v);
+          alert("URL2="+v);
         });
-     }, 250);
+     }, 2500);
     }
-
-    // When clicked, start trying to get the light value
-    path.addEventListener("click", function() {
-      getLightValue();
-    });
   </script>
  </body>
 </html>
