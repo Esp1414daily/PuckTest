@@ -24,6 +24,7 @@
 
     // When clicked, send an ifttt
     path.addEventListener("click", function() {
+       getLightValue();
       if (URLtoggle) {
         document.getElementById('IFTTT').src = URL1+"?"+iftttRequests;
       } else {
