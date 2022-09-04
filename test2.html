@@ -30,9 +30,11 @@
         }, 250);
 */        
       });
-     Puck.eval("getURL2()", function(v) {
-       alert("URK2="+v);
-      });
+     setTimeout(function() {
+        Puck.eval("getURL2()", function(v) {
+          alert("URK2="+v);
+        });
+     }, 250);
     }
 
     // When clicked, start trying to get the light value
